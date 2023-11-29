@@ -2,7 +2,8 @@
 
 html {
 	/* font */
-	--font-serif: 'ETBook', serif;
+	--font-sans: 'Gill Sans', sans;
+    --font-serif: 'ET Book', serif;
 
 	/* dark */
 	--brand-dark: var(--orange-3);

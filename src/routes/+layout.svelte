@@ -6,6 +6,8 @@
 	import 'open-props/normalize'
 	import 'open-props/buttons'
 
+	
+	import '../../node_modules/tufte-css/tufte.css'
 	import '../app.css'
 </script>
 
