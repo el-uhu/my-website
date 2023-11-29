@@ -1,5 +1,5 @@
 <script lang="js">
-	import { formatDate } from '$lib/utils.js'
+	import { formatDate } from '$lib/utils'
 	import * as config from '$lib/config'
 
 	export let data
