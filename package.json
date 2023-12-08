@@ -31,6 +31,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@tailwindcss/typography": "^0.5.10",
 		"lucide-svelte": "^0.294.0",
 		"typeface-et-book": "^0.0.2"
 	}

@@ -12,6 +12,7 @@
 </svelte:head>
 
 <div class="flex justify-center p-10">
+
 	<article class="text-zinc-300 overflow-auto max-w-prose">
 		<!-- Title -->
 		  <hgroup>
@@ -27,7 +28,7 @@
 		  </div>
 	  
 		<!-- Post -->
-		  <div class="prose">
+		  <div class="prose prose-invert prose-zinc font-serif">
 			  <svelte:component this={data.content} />
 		  </div>
 	  </article>
@@ -35,21 +36,4 @@
 
 
 <style>
-	.prose {
-		@apply font-serif
-	}
-
-	@tailwind base;
-
-	@layer base {
-		h1 {
-			@apply text-2xl;
-		}
-
-		h2 {
-			@apply text-xl;
-		}
-	}
-
-
 </style>
