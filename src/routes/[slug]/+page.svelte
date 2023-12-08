@@ -11,49 +11,45 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article>
-  <!-- Title -->
-	<hgroup>
-		<h1>{data.meta.title}</h1>
-		<p>Published at {formatDate(data.meta.date)}</p>
-	</hgroup>
+<div class="flex justify-center p-10">
+	<article class="text-zinc-300 overflow-auto max-w-prose">
+		<!-- Title -->
+		  <hgroup>
+			  <h1 class="text-2xl">{data.meta.title}</h1>
+			  <p class="italic text-sm">Published at {formatDate(data.meta.date)}</p>
+		  </hgroup>
+	  
+		<!-- Tags -->
+		  <div class="tags my-5">
+			  {#each data.meta.categories as category}
+				  <span class="p-2 mx-2 rounded-2xl text-sm bg-zinc-700">&num;{category}</span>
+			  {/each}
+		  </div>
+	  
+		<!-- Post -->
+		  <div class="prose">
+			  <svelte:component this={data.content} />
+		  </div>
+	  </article>
+</div>
 
-  <!-- Tags -->
-	<div class="tags">
-		{#each data.meta.categories as category}
-			<span class="surface-4">&num;{category}</span>
-		{/each}
-	</div>
-
-  <!-- Post -->
-	<div class="prose">
-		<svelte:component this={data.content} />
-	</div>
-</article>
 
 <style>
-	article {
-
-		margin-inline: auto;
+	.prose {
+		@apply font-serif
 	}
 
-	h1 {
-		text-transform: capitalize;
+	@tailwind base;
+
+	@layer base {
+		h1 {
+			@apply text-2xl;
+		}
+
+		h2 {
+			@apply text-xl;
+		}
 	}
 
-	h1 + p {
-		margin-top: var(--size-2);
-		color: var(--text-2);
-	}
 
-	.tags {
-		display: flex;
-		gap: var(--size-3);
-		margin-top: var(--size-7);
-	}
-
-	.tags > * {
-		padding: var(--size-2) var(--size-3);
-		border-radius: var(--radius-round);
-	}
 </style>
