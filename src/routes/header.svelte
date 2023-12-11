@@ -2,7 +2,7 @@
 	import * as config from '$lib/config'
 </script>
 
-<nav class="bg-zinc-700 px-10 py-5 flex">
+<nav class="bg-zinc-700 px-10 py-5 flex sticky top-0">
   <!-- Title -->
 	<a href="/" class="title text-zinc-300">
 		<b>{config.title}</b>

@@ -1,13 +1,18 @@
 <script lang="js">
 	import { formatDate } from '$lib/utils'
 	import * as config from '$lib/config'
+	import Hero from '$lib/components/hero.svelte'
 
 	export let data
+
+	// Animate Hero
 </script>
 
 <svelte:head>
 	<title>{config.title}</title>
 </svelte:head>
+
+<Hero/>
 
 <div class="">
 	<div class="grid grid-cols-6 gap-5 p-10">

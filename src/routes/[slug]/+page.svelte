@@ -11,9 +11,13 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<div class="flex justify-center p-10">
-
-	<article class="text-zinc-300 overflow-auto max-w-prose">
+<div class="flex justify-center p-10 text-zinc-300">
+	<div class="px-5 sticky top-10">
+		<ul>
+			<li>TOC Placehoder</li>
+		</ul>
+	</div>
+	<article class=" overflow-auto max-w-prose">
 		<!-- Title -->
 		  <hgroup>
 			  <h1 class="text-2xl">{data.meta.title}</h1>
